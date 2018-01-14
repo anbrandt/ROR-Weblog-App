@@ -1,6 +1,7 @@
 <h2> create an article</h2>
 
 <% if @article.errors.any? %>
+  <h5>Article has not been saved because of this errors:</h5>
   <ul>
     <% @article.errors.full_messages.each do |message| %>
       <li>    <%= message %>
@@ -26,3 +27,4 @@
   </p>
 
 <% end %>
+

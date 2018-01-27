@@ -1,8 +1,10 @@
 <h3>Listing all articles</h3>
 
-<p>You hve written <%= @allarticles.length %> articles
+<p>You have written <%= @allarticles.length %> articles
 </p>
 
+<%= link_to 'Create new article', new_article_path %>
+<p></p>
 <table>
   <tr>
     <th>Id </th>
@@ -25,13 +27,13 @@
       </td>
       <td> <%= article.description %></td>
       <td>
-        <%= link_to 'show', article%>
+        <%= link_to 'show ', article%>
       </td>
       <td>
-        <%= link_to 'edit', edit_article_path(article) %>
+        <%= link_to 'edit ', edit_article_path(article) %>
       </td>
       <td>
-        <%=link_to 'destroy', article, method: :delete, data: {confirm: "Are you sure?"} %>
+        <%=link_to 'destroy |', article, method: :delete, data: {confirm: "Are you sure?"} %>
       </td>
 
     </tr>

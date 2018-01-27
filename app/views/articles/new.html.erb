@@ -1,32 +1,4 @@
-<h2> create an article</h2>
-
-<% if @article.errors.any? %>
-  <h5>Article has not been saved because of this errors:</h5>
-  <ul>
-    <% @article.errors.full_messages.each do |message| %>
-      <li>    <%= message %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
+<h2>Create an article </h2>
 
 
-
-<%= form_for @article do |f| %>
-  <p>
-    <%= f.label :title %><br/>
-    <%= f.text_field :title, class: 'form-control', placeholder: 'Enter title of the article' %>
-  </p>
-
-  <p>
-    <%= f.label :description %><br/>
-    <%= f.text_area :description, class: 'form-control', placeholder: 'Enter the content of the article' %>
-  </p>
-
-  <p>
-    <%= f.submit class: 'btn btn-primary' %>
-  </p>
-
-<% end %>
-
-</div>
+<%= render 'form' %>

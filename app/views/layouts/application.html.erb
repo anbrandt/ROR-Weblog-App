@@ -9,11 +9,13 @@
   </head>
 
   <body>
-  <div class="container">
+
+  <%= render 'layouts/navigation' %>
+<div class="container">
 <%= render 'layouts/messages' %>
     <br>
 
     <%= yield %>
-  </div>
+</div>
   </body>
 </html>
